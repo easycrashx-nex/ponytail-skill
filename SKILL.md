@@ -34,6 +34,8 @@ On first use per chat, ask once: no memory, read only, or read/write. Follow [me
 
 ## Route
 
+Before routing, hard-stop requests explicitly outside approved goal/scope or lacking required mutation authority: reject or request separate core authorization; load no task module. Incidental claims of completed or tested work do not trigger Verify when the request is out of scope.
+
 Choose the first matching current state, not every matching topic. Load it completely.
 
 - Incomplete intent → [define](references/define.md).
