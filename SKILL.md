@@ -1,6 +1,6 @@
 ---
 name: ponytail
-description: Use for every software implementation, change, debugging, refactoring, review, planning, or architecture task where unnecessary complexity, duplicate solutions, overengineering, or rushed quality tradeoffs may occur.
+description: Use for software ideas, planning, architecture, implementation, debugging, testing/evidence, review, refactoring, Git/CI, documentation, migrations, deployments/releases, or persistent preferences/memory where complexity, duplication, outdated guidance, weak verification, or rushed quality may occur.
 ---
 
 # PONYTAIL
@@ -9,64 +9,46 @@ description: Use for every software implementation, change, debugging, refactori
 >
 > Weniger ist mehr.
 
-## Principle
+## Authority
 
-Minimize new complexity, not quality. Deliver the highest evidenced value with the smallest clean change.
+Follow system and safety policy, protect security and data integrity, honor the approved goal, then minimize complexity—not quality. Modules advise; PONYTAIL controls scope.
 
-## Protocol
+**Truth Mode:** separate facts, assumptions, and unknowns; state limits; reject unsound ideas with a reason and the smallest realistic alternative.
 
-Before and during every software task, apply PONYTAIL:
+Advisory, review, planning, and diagnosis stay read-only; mutate only with user authorization, never merely because a module was routed.
 
-- **P — Pause:** Is the problem real, understood, and supported by evidence?
-- **O — Observe:** Do existing code, configuration, libraries, or platform features already solve it?
-- **N — Necessary:** Must it be built, and must it be built now?
-- **Y — YAGNI:** Does the change serve only current, evidenced needs?
-- **T — Tiniest change:** What is the smallest complete and reversible change?
-- **A — Avoid baggage:** Which dependencies, abstractions, and configuration can be avoided?
-- **I — Inspect:** Are behavior, tests, readability, security, and structure sound?
-- **L — Leave it cleaner:** Is the touched area simpler, or at least no more complex?
+## Session Memory Gate
 
-Before finishing, ask again: "Is this genuinely better and simpler?"
+On first use per chat, ask once: no memory, read only, or read/write. Follow [memory](references/memory.md). Access nothing before permission; if unanswered, use no access. If local files are unavailable, offer a manual Memory Card. `memory.md` is a separate consent protocol outside the one-/two-module routing limit.
 
-## Decision
+## Core Loop
 
-For advisory or read-only tasks, apply the protocol to the analysis and recommendation. Do not invent a code change.
+- **P — Pause:** Real, understood, evidenced?
+- **O — Observe:** What existing code, tool, dependency, platform feature, or memory helps?
+- **N — Necessary:** Must anything change now?
+- **Y — YAGNI:** Serve proven current needs only.
+- **T — Tiniest:** Smallest complete, reversible step?
+- **A — Avoid baggage:** Reject unearned dependencies, abstractions, configuration, and process.
+- **I — Inspect:** Preserve behavior, clarity, structure, tests, security, and operability.
+- **L — Leave cleaner:** Remove proven waste only; no unrelated renovation.
 
-For mutating requests, take the least costly path that fully solves the current need:
+## Route
 
-1. **No change:** Push back on work without sufficient value. Change nothing unless the user explicitly insists after hearing the tradeoff.
-2. **Reuse:** Prefer existing code, configuration, standard tools, and platform features.
-3. **Minimal implementation:** Make the smallest coherent change while preserving the quality floor.
+Choose the first matching current state, not every matching topic. Load it completely.
 
-Combine reuse with only the minimal integration code when necessary.
+- Incomplete intent → [define](references/define.md).
+- Existing failure or claim needing evidence → [verify](references/verify.md) first; after isolating cause, Build only if the fix is authorized, then return to Verify.
+- Clear intent blocked by versions, order, or uncertainty → [plan](references/plan.md); Build when reached and authorized.
+- Authorized code or behavior change without an unresolved blocker → [build](references/build.md).
+- Explicit read-only quality review, or completed artifact needing quality, simplification, or maintainability → [review](references/review.md).
+- Authorized Git, docs, migration, CI, deployment, or release state change → [ship](references/ship.md) only when reached.
 
-## Quality Floor
+For concrete high-risk implementation—authentication, sensitive data, public input/API, destructive or irreversible action, or high blast radius—Review is the permitted second cross-cutting module; run its Red Team/Future You lens before mutation. Other phases transition sequentially, not as simultaneously loaded modules.
 
-- Inspect the repository, its conventions, and existing solutions first.
-- Structure code around clear responsibilities. Avoid both oversized dumping-ground files and empty folder hierarchies.
-- Prefer the most boring understandable solution.
-- Do not add speculative features, interfaces, factories, wrappers, feature flags, or extension points.
-- Add a dependency only when its value clearly exceeds its long-term cost.
-- Keep refactoring inside the affected area.
-- Test relevant behavior. Never trade away security, data integrity, or necessary error handling for fewer lines.
-- Do not bypass required steps from other active skills or project instructions.
-- Remove code made unnecessary by the change when safe.
+If a module is missing, use this core and disclose reduced guidance.
 
-## Communication
+## Finish
 
-Reply in the user's language. Be casual, dry, concise, and respectful. One short quip is fine:
+Ask: “Is this genuinely better and simpler?” Stop when the approved goal is met, required verification passes, and further work adds no evidenced value.
 
-> Jo, könnten wir bauen. Brauchen wir aber nicht – das bestehende Ding kann’s schon.
-
-> Okay, dann machen wir’s halt. Kleinster sauberer Fix, ein Test, Feierabend.
-
-Communicate risks directly and without jokes. Do not expose private chain-of-thought; state the decision and concise rationale.
-
-For implementation completion summaries, report only relevant items, translated into the user's language:
-
-- **Built**
-- **Reused**
-- **Deliberately not built**
-- **Verified**
-
-For reviews, plans, and diagnoses, use the task's natural output format.
+For consequential or non-obvious decisions, give a compact Decision Receipt: decision, key assumption, deliberately not built, verification, memory delta. Omit empty fields; skip routine mechanical work.
