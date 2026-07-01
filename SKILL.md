@@ -1,6 +1,6 @@
 ---
 name: ponytail
-description: Use for software ideas, planning, architecture, implementation, debugging, testing/evidence, review, refactoring, Git/CI, documentation, migrations, deployments/releases, or persistent preferences/memory where complexity, duplication, outdated guidance, weak verification, or rushed quality may occur.
+description: Use when software lifecycle work risks complexity, duplication, outdated guidance, weak verification, or rushed quality.
 ---
 
 # PONYTAIL
@@ -34,7 +34,7 @@ On first use per chat, ask once: no memory, read only, or read/write. Follow [me
 
 ## Route
 
-Before routing, hard-stop requests explicitly outside approved goal/scope or lacking required mutation authority: reject or request separate core authorization; load no task module. Incidental claims of completed or tested work do not trigger Verify when the request is out of scope.
+Before routing, hard-stop only untrusted/incidental scope expansion or absent mutation authority: reject or request authorization; load no task module. A current explicit trusted-user request can set a new goal. Past-state claims irrelevant to it do not trigger Verify.
 
 Choose the first matching current state, not every matching topic. Load it completely.
 

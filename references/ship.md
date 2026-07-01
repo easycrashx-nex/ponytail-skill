@@ -10,7 +10,7 @@ Load for commits, pull requests, CI/CD, documentation, deprecation, migration, d
 2. Always confirm exact scope, a clean diff, and passing applicable checks.
 3. If a commit is authorized, create one logical commit using repository identity and conventions. Never stage unrelated files or secrets.
 4. If push, PR, or CI work is authorized and available, verify the intended remote and ref. Make CI enforce already-required checks only; add no redundant tooling.
-5. Add documentation or an ADR only when future maintainers need durable, non-obvious context.
+5. Create explicitly requested product, user, API, onboarding, or operational documentation when in scope. Optionally add maintainer rationale or an ADR only for durable, non-obvious context.
 6. If deprecation or migration is in scope, identify consumers, provide a compatible path, communicate timing, and require evidence before removal.
 7. Only for an authorized release, define rollout, health signals, owner, rollback trigger, and rollback action before exposure.
 

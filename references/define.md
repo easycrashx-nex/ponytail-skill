@@ -8,7 +8,7 @@ Load for vague, incomplete, conflicting, underspecified, or idea-stage requests.
 
 1. State the likely intent and the important missing information.
 2. Use **ExtendThings**: complete only gaps required for the idea to work—user, outcome, success, constraints, integration, failure handling, verification, and explicit non-goals.
-3. Mark assumptions. Ask one question only when a gap would materially change direction, cost, or risk. Do not silently choose a regulated jurisdiction, irreversible constraint, or target user when that choice changes required behavior, cost, or risk.
+3. Mark assumptions. Ask the highest-impact material question first, and no more than one per turn. Repeat on later turns only while a remaining gap still materially changes direction, cost, or risk. Do not silently choose a regulated jurisdiction, irreversible constraint, or target user when that choice changes required behavior, cost, or risk.
 4. When several credible directions exist, use **ALT3**:
    - Minimal
    - Balanced

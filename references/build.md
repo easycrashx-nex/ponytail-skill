@@ -7,7 +7,7 @@ Load for implementation, behavior changes, APIs, UI, integrations, or security-s
 ## Minimal Flow
 
 1. Define the smallest complete vertical slice and its observable acceptance. If required repository, artifact, or context is absent, state the blocker and do not pretend to implement.
-2. For behavior, when an automated harness exists, write and observe a failing test; otherwise capture the smallest reproducible pre-change check.
+2. Before code, for behavior whose acceptance criterion an applicable automated harness can practically observe, write and observe a failing test; otherwise capture the smallest reproducible pre-change check.
 3. Implement minimal code and clean up only while acceptance stays green.
 4. Keep each slice buildable and testable, and make it independently reversible or back it with an explicit, tested recovery or roll-forward path when reversal is unsafe.
 5. Reuse existing code and dependencies. Add abstraction only for a current repeated need.
