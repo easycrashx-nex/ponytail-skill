@@ -49,6 +49,6 @@ If a module is missing, use this core and disclose reduced guidance.
 
 ## Finish
 
-Ask: “Is this genuinely better and simpler?” Stop when the approved goal is met, required verification passes, and further work adds no evidenced value.
+Ask: "Is this genuinely better and simpler?" Stop when the approved goal is met, required verification passes, and further work adds no evidenced value.
 
 For consequential or non-obvious decisions, give a compact Decision Receipt: decision, key assumption, deliberately not built, verification, memory delta. Omit empty fields; skip routine mechanical work.
