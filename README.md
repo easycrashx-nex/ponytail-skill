@@ -4,24 +4,30 @@
 >
 > Weniger ist mehr.
 
-PONYTAIL is a portable Agent Skill for software work. It behaves like a pragmatic, pleasantly lazy senior developer: question unnecessary work, reuse what exists, and otherwise make the smallest clean change.
+PONYTAIL is one portable Agent Skill for the full software lifecycle. It behaves like a pragmatic, pleasantly lazy senior developer: challenge unnecessary work, complete missing essentials, reuse what exists, and otherwise make the smallest clean change.
 
-Minimal scope does not mean minimal quality. PONYTAIL preserves structure, readability, relevant tests, security, and data integrity.
+The PONYTAIL core remains authoritative. Helper modules are loaded only when they make the current task safer or better.
 
-## Protocol
+## Capabilities
 
-- **P — Pause:** Verify the problem.
-- **O — Observe:** Search for an existing solution.
-- **N — Necessary:** Confirm it must be built now.
-- **Y — YAGNI:** Serve current needs only.
-- **T — Tiniest change:** Keep the change complete and reversible.
-- **A — Avoid baggage:** Reject unnecessary dependencies and abstractions.
-- **I — Inspect:** Check behavior, tests, security, and structure.
-- **L — Leave it cleaner:** Avoid leaving more complexity behind.
+- **Truth Mode:** direct facts, assumptions, limits, and realistic alternatives
+- **Define:** incomplete ideas, ExtendThings, ALT3, intent, specifications
+- **Plan:** search-first, progressive context, official sources, reuse/adapt/build, task slices
+- **Build:** incremental implementation, TDD, APIs, UI, security
+- **Verify:** acceptance and regression gates, debugging, browser/runtime evidence, performance
+- **Review:** quality, simplification, Red Team, Future You
+- **Ship:** Git, CI/CD, documentation, migration, rollback, release
+- **Second Brain:** optional permission-gated local Markdown memory
+
+PONYTAIL stops when the approved goal is met and verified. It loads one current-phase module by default and does not run every module for every task.
+
+## Memory and Privacy
+
+At first use per chat, PONYTAIL asks for no memory, read-only memory, or read/write memory. Without an answer it continues with no access. The default local memory store is plaintext Markdown in the host's user-home directory (for example `$HOME/.ponytail-memory`), outside this repository. PONYTAIL does not encrypt it; confidentiality depends on the host's filesystem, sync, and backup controls. It never stores secrets, full chats, transient task state, sensitive personal data, or instructions derived from untrusted content.
 
 ## Install
 
-PONYTAIL follows the [Agent Skills specification](https://agentskills.io/specification). Clone the repository into the personal skill directory used by your agent.
+PONYTAIL follows the [Agent Skills specification](https://agentskills.io/specification).
 
 ### Codex
 
@@ -41,9 +47,13 @@ See the [Claude Code skills documentation](https://code.claude.com/docs/en/skill
 
 ### Other LLMs
 
-If your tool supports the open Agent Skills format, install this repository in its skill directory. Otherwise, paste the contents of [`SKILL.md`](SKILL.md) into the system or custom instructions before starting software work.
+Install this repository in the host's Agent Skills directory. Without Agent Skills support, provide `SKILL.md` and only the relevant referenced module as system or custom instructions.
 
-Automatic activation depends on the host tool. The instructions themselves are model-independent and require no scripts, packages, network access, or external tools.
+Automatic routing, filesystem memory, and tool use depend on the host. The core instructions remain model-independent.
+
+## Attribution
+
+Lifecycle-module concepts are inspired by [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) and [affaan-m/ECC](https://github.com/affaan-m/ECC). Both upstream projects are MIT-licensed; no upstream runtime is bundled. See [Third-Party Notices](THIRD_PARTY_NOTICES.md).
 
 ## License
 
